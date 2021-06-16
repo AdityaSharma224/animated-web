@@ -150,7 +150,7 @@ nav .bars{
     }
     .nav-links{
         position:absolute;
-        background: #05093f;
+        background: #040730;
         height:100vh;
         width:200px;
         top:0;
@@ -307,6 +307,7 @@ p{
 .cta{
     margin:100px auto;
     width:80%;
+    background-color:#132b50 ;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/work5.jpg );
     background-position: center;
     background-size: cover;
@@ -318,10 +319,14 @@ p{
 .cta h1{
     color:#fff;
     margin-bottom: 40px;
-    padding: 0px;
+    padding: 0;
 }
 
 @media(max-width:700px){
+
+    .cta{
+        margin:600px auto;
+    }
     .cta h1{
         font-size:24px;
     }
