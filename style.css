@@ -6,7 +6,7 @@
 .header{
     min-height: 100vh;
     width:100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/ban3.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/1091\ [Converted].png);
     background-size: cover;
     background-position: center; 
     position: relative;
@@ -46,7 +46,7 @@ nav img{
 .nav-links ul li a:hover{
    
     color: #2196f3;
-    box-shadow: 0 0 10px #2196f3, 0 0 10px #2196f3, 0 0 10px #2196f3;
+    box-shadow: 0 0 10px #226499, 0 0 10px #2196f3, 0 0 10px #2196f3;
 }
 
 .nav-links ul li::after{
@@ -69,7 +69,7 @@ nav img{
 .animation{
   height: 100px;
   width:100px;
-  background-color: rgb(6, 10, 41);
+  background-color: rgba(6, 10, 41, 0.007);
   position: relative;
   animation-name: example;
   animation-duration: 4s;
@@ -80,7 +80,7 @@ nav img{
     25%  {background-color:rgb(17, 59, 114); left:1000px; top:0px;}
     50%  {background-color:rgb(22, 22, 83); left:1000px; top:1000px;}
     75%  {background-color:rgb(18, 35, 90); left:0px; top:1000px;}
-    100% {background-color:rgb(8, 41, 83); left:0px; top:0px;}
+    100% {background-color:rgba(50, 120, 212, 0.938); left:0px; top:0px;}
   }
 
 .text-box{
@@ -94,7 +94,8 @@ nav img{
 }
 
 .text-box h1{
-    font-size: 40px;
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color:rgb(0, 195, 255);
     animation-name: light;
     animation-duration:5s;
@@ -117,17 +118,17 @@ nav img{
     text-decoration: none;
     color:white;
     padding: 12px 34px;
-    border:1px solid rgb(50, 198, 243);
+    border:1px solid #1524a3;
     font-size: 13px;
-    background: rgb(50, 198, 243);
+    background: #1524a3;
     position: relative;
     cursor:pointer;
 }
 
 .hero-btn:hover{
-    border:1px solid #2478f5;
-    background:#2196f3;
-    box-shadow: 0 0 10px #2196f3, 0 0 10px #2196f3, 0 0 10px #2196f3;
+    border:1px solid#1524a3;
+    background:#1524a3;
+    box-shadow: 0 0 10px #1524a3, 0 0 10px #1524a3, 0 0 10px #1524a3;
     transition: 0.5s;
 }
 
@@ -197,35 +198,33 @@ main{
 .service h1{
     font-size: 45px;
     font-weight: 600px;
-    position: relative;
-    color:#112a4e;
-    -webkit-text-stroke:0.3vw #1b3b6b;
-    text-transform: uppercase;
+    animation:type 6s infinite ;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #2196f3;
+   
+    
 
 }
 
-.service h1::before{
-    content: attr(data-text);
-    position: absolute;
-    top:0;
-    width:0;
-    height:100%;
-    color:rgb(29, 143, 219);
-    -webkit-text-stroke:0vw #383d52;
-    border-right:2px solid rgb(29, 143, 219);
-    overflow:hidden;
-    animation: animate 6s linear infinite;
+@media(max-width:700px){
+    .service h1{
+        animation: none;
+        background-color: #2196f3;
+        color:#132b50;
+    }
 
 }
 
-@keyframes animate
+@keyframes type
 {
-    0%,10%,100%{
-        width:0;
+    0%{
+        width:0ch;
     }
-    70%,70%{
-        width:70%;
+    70%{
+        width:34ch;
     }
+
 }
 
 h3{
@@ -269,13 +268,16 @@ p{
     }
 }
 
-
+main .offercon{
+    width:100%;
+    height: 100vh;
+    background-color:#0d2344 ;
+}
 .offer{
     width:80%;
     background-color: #0d2344;
     text-align: center;
     margin: auto;
-    height: 100vh;
     padding-top:50px ;
     justify-content: space-between;
 }
@@ -340,24 +342,22 @@ p{
 }
 
 .call{
-    width:100%;
-    margin: auto;
-    height: 100vh;
-    background-color:#132b50;
-    text-align: center;
-
-
+    height:100vh;
+    
+    padding: 80px;
+    background-color: #132b50;
 }
+
 .cta{
-    margin: auto;
+    margin:auto;
     width:80%;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/work5.jpg );
     background-position: center;
     background-size: cover;
     border-radius:10px;
-    background-color:#132b50;
+    background-color:#0d2344;
     text-align: center;
-    padding:100px 0;
+    padding:100px;
 }
 
 .cta h1{
@@ -369,7 +369,8 @@ p{
 @media(max-width:700px){
 
     .cta{
-        margin:600px auto;
+        margin:auto;
+        padding: 30px;
     }
     .cta h1{
         font-size:24px;
