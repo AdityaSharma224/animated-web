@@ -6,7 +6,7 @@
 .header{
     min-height: 100vh;
     width:100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/ban.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/ban3.jpg);
     background-size: cover;
     background-position: center; 
     position: relative;
@@ -95,6 +95,7 @@ nav img{
 
 .text-box h1{
     font-size: 40px;
+    color:rgb(0, 195, 255);
     animation-name: light;
     animation-duration:5s;
 }
@@ -193,10 +194,38 @@ main{
     padding-top:100px;
 }
 
-h1{
+.service h1{
     font-size: 45px;
     font-weight: 600px;
-    color: rgb(29, 143, 219);
+    position: relative;
+    color:#112a4e;
+    -webkit-text-stroke:0.3vw #1b3b6b;
+    text-transform: uppercase;
+
+}
+
+.service h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top:0;
+    width:0;
+    height:100%;
+    color:rgb(29, 143, 219);
+    -webkit-text-stroke:0vw #383d52;
+    border-right:2px solid rgb(29, 143, 219);
+    overflow:hidden;
+    animation: animate 6s linear infinite;
+
+}
+
+@keyframes animate
+{
+    0%,10%,100%{
+        width:0;
+    }
+    70%,70%{
+        width:70%;
+    }
 }
 
 h3{
@@ -208,7 +237,7 @@ h3{
 }
 
 p{
-    color:rgb(192, 184, 226);
+    color:rgb(228, 224, 245);
     font-size: 19px;
     font-weight: 22px;
     line-height:22px;
@@ -231,7 +260,7 @@ p{
 }
 
 .service-col:hover{
-    box-shadow: 0 0 20px 0px rgba(66, 91, 161, 0.623);
+    box-shadow: 0 0 20px 0px rgba(49, 92, 212, 0.623);
 }
 
 @media(max-width:700px){
@@ -243,11 +272,17 @@ p{
 
 .offer{
     width:80%;
+    background-color: #0d2344;
     text-align: center;
     margin: auto;
     height: 100vh;
     padding-top:50px ;
     justify-content: space-between;
+}
+
+.offer h1{
+    color:#2196f3;
+    font-size: 30px;
 }
 
 .offer-col{
@@ -304,14 +339,23 @@ p{
     opacity: 1;
 }
 
+.call{
+    width:100%;
+    margin: auto;
+    height: 100vh;
+    background-color:#132b50;
+    text-align: center;
+
+
+}
 .cta{
-    margin:100px auto;
+    margin: auto;
     width:80%;
-    background-color:#132b50 ;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/work5.jpg );
     background-position: center;
     background-size: cover;
     border-radius:10px;
+    background-color:#132b50;
     text-align: center;
     padding:100px 0;
 }
@@ -336,7 +380,7 @@ p{
     width:100%;
     text-align: center;
     padding: 30px 0;
-    background-color:#132b50;
+    background-color:#0a172b;
 }
 
 .footer h4{
@@ -344,11 +388,11 @@ p{
     margin-top: 20px;
     font-weight: 600;
     font-size: 30px;
-    color:rgb(0, 0, 0)
+    color:rgb(255, 255, 255)
 }
 
 .footer p{
-    color:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
     
 }
 .icons{
