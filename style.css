@@ -22,11 +22,13 @@ nav{
 
 nav img{
     width: 200px;
+    
 }
 
 .nav-links{
     flex:2;
     text-align: right;
+   
    
 }
 .nav-links ul li{
@@ -67,21 +69,47 @@ nav img{
 }
 
 .animation{
-  height: 100px;
-  width:100px;
+  height: 50px;
+  width:50px;
   background-color: rgba(6, 10, 41, 0.007);
   position: relative;
-  animation-name: example;
+  animation-name: example ;
   animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.animation2{
+    height: 50px;
+    width:50px;
+    background-color: rgba(6, 10, 41, 0.007);
+    position: relative;
+    animation-name: example2;
+    animation-duration: 4s ;
+    animation-iteration-count: infinite;
 }
 
 @keyframes example {
-    0%   {background-color:rgb(37, 55, 158); left:0px; top:0px;}
-    25%  {background-color:rgb(17, 59, 114); left:1000px; top:0px;}
-    50%  {background-color:rgb(22, 22, 83); left:1000px; top:1000px;}
-    75%  {background-color:rgb(18, 35, 90); left:0px; top:1000px;}
-    100% {background-color:rgba(50, 120, 212, 0.938); left:0px; top:0px;}
-  }
+    0%   {background-color:rgb(63, 170, 219); left:0px; top:0px;}
+    100%  {background-color:rgb(12, 83, 163); left:1000px; top:0px;}
+   
+}
+
+@keyframes example2 {
+    100%   {background-color:rgb(63, 170, 219);; left:0px; top:0px;}
+    0%  {background-color:rgb(12, 83, 163); left:1000px; top:0px;}
+   
+}
+
+@media (max-width:700px) {
+    .animation{
+        animation: none;
+    }
+
+    .animation2{
+        animation: none;
+    }
+}
+
 
 .text-box{
     width: 90%;
@@ -96,9 +124,10 @@ nav img{
 .text-box h1{
     font-size: 50px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:rgb(0, 195, 255);
+    color:rgb(0, 89, 255);
     animation-name: light;
-    animation-duration:5s;
+    animation-duration: 6s ;
+    text-shadow: 2px 2px #dad9f3;
 }
 @keyframes light {
     0%   {color: rgb(0, 195, 255);}
@@ -114,21 +143,42 @@ nav img{
 
 
 .hero-btn{
-    display:inline-block;
+    display:inline;
     text-decoration: none;
     color:white;
     padding: 12px 34px;
-    border:1px solid #1524a3;
-    font-size: 13px;
-    background: #1524a3;
+    border:1px solid #2762e2;
+    font-size: 25px;
+    background: #2762e2;
     position: relative;
     cursor:pointer;
 }
 
+.hero-btn2{
+    display:inline-block;
+    text-decoration: none;
+    color:white;
+    margin: 25px;
+    padding: 12px 34px;
+    border:1px solid #2762e2;
+    font-size: 25px;
+    background: #2762e2;
+    position: relative;
+    cursor:pointer;
+}
+
+
 .hero-btn:hover{
-    border:1px solid#1524a3;
-    background:#1524a3;
-    box-shadow: 0 0 10px #1524a3, 0 0 10px #1524a3, 0 0 10px #1524a3;
+    border:1px solid#318bff;
+    background:#318bff;
+    box-shadow: 0 0 10px #318bff, 0 0 10px #318bff, 0 0 10px #318bff;
+    transition: 0.5s;
+}
+
+.hero-btn2:hover{
+    border:1px solid#318bff;
+    background:#318bff;
+    box-shadow: 0 0 10px #318bff, 0 0 10px #318bff, 0 0 10px #318bff;
     transition: 0.5s;
 }
 
@@ -145,7 +195,39 @@ nav .bars{
 
 @media(max-width:700px){
     .text-box h1{
-        font-size: 25px;
+        font-size: 40px;
+        text-shadow:0 0 3px #318bff, 0 0 3px #318bff, 0 0 3px #318bff; ;
+    }
+
+    .hero-btn{
+        border:1px solid#318bff;
+        background:#318bff;
+        box-shadow: 0 0 10px #318bff, 0 0 10px #318bff, 0 0 10px #318bff;
+        transition: 0.5s;
+    }
+    .hero-btn:hover{
+        border:1px solid#151386;
+        background:#151386;
+        box-shadow: 0 0 10px #151386, 0 0 10px #151386, 0 0 10px #151386;
+        transition: 0.5s;
+    }
+
+    .hero-btn2{
+        border:1px solid#318bff;
+        background:#318bff;
+        box-shadow: 0 0 10px #318bff, 0 0 10px #318bff, 0 0 10px #318bff;
+        transition: 0.5s;
+    }
+
+    .hero-btn2:hover{
+        border:1px solid#151386;
+        background:#151386;
+        box-shadow: 0 0 10px #151386, 0 0 10px #151386, 0 0 10px #151386;
+        transition: 0.5s;
+    }
+
+    .text-box p{
+        font-size: 12px;
     }
     .nav-links ul li{
         display: block;
@@ -196,20 +278,19 @@ main{
 }
 
 .service h1{
-    font-size: 45px;
+    font-size: 50px;
     font-weight: 600px;
     animation:type 6s infinite ;
     overflow: hidden;
     white-space: nowrap;
-    color: #2196f3;
-   
-    
-
+    color: #1860e6;
+    text-shadow: 1px 1px #1863d4;
 }
 
 @media(max-width:700px){
     .service h1{
         animation: none;
+        font-size: 30px;
         background-color: #2196f3;
         color:#132b50;
     }
@@ -222,8 +303,12 @@ main{
         width:0ch;
     }
     70%{
-        width:34ch;
+        width:45ch;
     }
+    0%   {color: rgb(0, 195, 255);}
+    25%  {color: rgb(217, 223, 224);}
+    50%  {color: rgb(105, 105, 221);}
+    100% {color: rgb(50, 78, 241);}
 
 }
 
@@ -259,13 +344,14 @@ p{
 }
 
 .service-col:hover{
-    box-shadow: 0 0 20px 0px rgba(49, 92, 212, 0.623);
+    box-shadow: 0 0 20px 0px rgba(195, 205, 233, 0.699);
 }
 
 @media(max-width:700px){
     .row{
         flex-direction: column;
     }
+   
 }
 
 main .offercon{
@@ -284,7 +370,8 @@ main .offercon{
 
 .offer h1{
     color:#2196f3;
-    font-size: 30px;
+    font-size: 50px;
+    box-shadow: rgba(238, 239, 240, 0.973);
 }
 
 .offer-col{
@@ -343,7 +430,6 @@ main .offercon{
 
 .call{
     height:100vh;
-    
     padding: 80px;
     background-color: #132b50;
 }
@@ -366,6 +452,25 @@ main .offercon{
     padding: 0;
 }
 
+.hero-btn3{
+    display:inline-block;
+    text-decoration: none;
+    color:white;
+    padding: 12px 34px;
+    border:1px solid #2762e2;
+    font-size: 16px;
+    background: #2762e2;
+    position: relative;
+    cursor:pointer;
+}
+
+.hero-btn3:hover{
+    border:1px solid#318bff;
+    background:#318bff;
+    box-shadow: 0 0 10px #318bff, 0 0 10px #318bff, 0 0 10px #318bff;
+    transition: 0.5s;
+}
+
 @media(max-width:700px){
 
     .cta{
@@ -374,6 +479,27 @@ main .offercon{
     }
     .cta h1{
         font-size:24px;
+    }
+
+    .call{
+        height:50vh;
+    }
+
+    
+    .hero-btn3{
+        display:inline-block;
+        border:1px solid#318bff;
+        background:#318bff;
+        box-shadow: 0 0 10px #318bff, 0 0 10px #318bff, 0 0 10px #318bff;
+        transition: 0.5s;
+        padding: 12px 20px;
+        
+    }
+    .hero-btn3:hover{
+        border:1px solid#151386;
+        background:#151386;
+        box-shadow: 0 0 10px #151386, 0 0 10px #151386, 0 0 10px #151386;
+        transition: 0.5s;
     }
 }
 
