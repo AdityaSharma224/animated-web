@@ -9,8 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
 </head>
-<body>
+<body onload="myfunction()">
+
+
+    <div id="preloader"></div>
     <section class="header">
         <nav>
             <a href="index.html"><img src="images/logo.png"></a>
@@ -27,6 +32,7 @@
                </ul> 
             </div>
             <img  class="bars"  onclick="showMenu()" src="images/list (1).png">
+            
         </nav>
        
 
@@ -34,39 +40,57 @@
         
         <div class="text-box">
             <div class="animation"></div>
-            <h1>Simplifying Business Intelligence for Enterprises</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. mollitia corporis enim.<br> Laboriosam nobis voluptatum exercitationem omnis </p>
-            <a href="" class="hero-btn">EXPLORE US</a>
+            <h1  data-aos="slide-right"  >Simplifying Business<br> Intelligence for Enterprises</h1>
+            <p data-aos="slide-right" >Lorem ipsum dolor sit amet consectetur adipisicing elit. mollitia corporis enim.<br> Laboriosam nobis voluptatum exercitationem omnis </p>
+            <a    href="" class="hero-btn">EXPLORE US</a>
             <a href="" class="hero-btn2">CONTACT US</a>
             <div class="animation2"></div>
+            
         </div>
+
+
+
+        
 
         
           
         
-    </section
+    </section>
 
-    <!-- ---Nimoy Services--- -->
+    <section class="firstsec">
+        <div class="text">
+            <h1 data-aos="slide-down"  data-aos-duration="4000">Nimoy AI Studio</h1>
+            <p data-aos="slide-right"  data-aos-duration="8000">Nimoy AI Studio is built on layers that can be augmented to enterprise business systems to accelerate and reap AI benefits. Nimoy AI Studio consists of containerized digital assets that are platform agnostic, customizable and are deployment ready. Popular benefits include minimizing AI implementation time by 
+            30%, reducing TAT and risk from digital disruption</p>
+
+
+                
+        </div>
+        
+        
+    </section>
+
+   
     <main >
         <div class="service">
-            <h1>NIMOY TECH</h1>
+            <h1 data-aos="slide-down"  data-aos-duration="4000">NIMOY AI</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, cum.</p>
 
 
 
             <div class="row">
 
-                <div class="service-col">
+                <div data-aos="zoom-out-up"  data-aos-duration="4000" class="service-col">
                     <h3>Nimoy AI Studio</h3>
                     <p>Nimoy AI Studio is built on layers that can be augmented to enterprise business systems to accelerate and reap AI benefits. Nimoy AI Studio consists of containerized digital assets that are platform agnostic, customizable and are deployment ready. Popular benefits include minimizing AI implementation time by 30%, reducing TAT and risk from digital disruption</p>
                 </div>
 
-                <div class="service-col">
+                <div  data-aos="zoom-out-up"  data-aos-duration="4000" class="service-col">
                     <h3>Nimoy Computer Vision</h3>
                     <p>Nimoy AI Studio is built on layers that can be augmented to enterprise business systems to accelerate and reap AI benefits. Nimoy AI Studio consists of containerized digital assets that are platform agnostic, customizable and are deployment ready. Popular benefits include minimizing AI implementation time by 30%, reducing TAT and risk from digital disruption</p>
                 </div>
 
-                <div class="service-col">
+                <div  data-aos="zoom-out-up"  data-aos-duration="4000" class="service-col">
                     <h3>Nimoy Data Studio</h3>
                     <p>Nimoy AI Studio is built on layers that can be augmented to enterprise business systems to accelerate and reap AI benefits. Nimoy AI Studio consists of containerized digital assets that are platform agnostic, customizable and are deployment ready. Popular benefits include minimizing AI implementation time by 30%, reducing TAT and risk from digital disruption</p>
                 </div>
@@ -76,7 +100,7 @@
 
     </main>
 
-    <main class="offercon">
+    <section class="offercon">
         <div class="offer">
             <h1>SERVICES OFFERED</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsa!</p>
@@ -114,14 +138,9 @@
             </div>
 
         </div>    
-    </main>
-
-    <section class="call">
-      <div class="cta">
-        <h1>Enroll For Our Various Online Services<br>Anywhere From The World</h1>
-        <a class="hero-btn3" href="">CONTACT US</a>
-      </div> 
     </section>
+
+   
 
     <footer class="footer">
         <h4>About Us</h4>
@@ -148,6 +167,25 @@
             navLinks.style.right = "-200px";
         }
 
+      
     </script>
+
+    <script>
+        var loader = document.getElementById("preloader");
+
+        function myfunction(){
+            loader.style.display = 'block';
+            setTimeout("hide()",4000);
+        }
+
+        hide = function(){
+            loader.style.display = "none";
+        };
+    </script>
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+     <script>
+       AOS.init();
+     </script>
+    
 </body>
 </html>

@@ -1,12 +1,32 @@
+
+
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins','sans-serif';
+    box-sizing: border-box;
+    
 }
+
+#preloader{
+    background: #fff url(images/NimoyAI_Logo_Main_Preview.jpg) no-repeat center center;
+    height:100vh;
+    width:100%;
+    position:fixed;
+    z-index: 100;
+}
+
+@media (max-width:700px){
+
+    #preloader{
+        background-size: cover;
+        width: 64%;
+    }
+}
+
 .header{
     min-height: 100vh;
     width:100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/1091\ [Converted].png);
+    background-image: linear-gradient(rgba(98, 122, 209, 0.7),rgba(15, 25, 66, 0.7)),url(Artboard\ 1-100\ \(2\).jpg);
     background-size: cover;
     background-position: center; 
     position: relative;
@@ -21,7 +41,7 @@ nav{
 }
 
 nav img{
-    width: 200px;
+    width: 250px;
     
 }
 
@@ -42,13 +62,14 @@ nav img{
     color:azure;
     text-decoration: none;
     font-size: 19px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     
 }
 
 .nav-links ul li a:hover{
    
-    color: #2196f3;
-    box-shadow: 0 0 10px #226499, 0 0 10px #2196f3, 0 0 10px #2196f3;
+    color: rgb(255, 241, 241);
+    box-shadow: 0 0 10px #ffffff, 0 0 10px #ffffff, 0 0 10px #ffffff;
 }
 
 .nav-links ul li::after{
@@ -89,14 +110,14 @@ nav img{
 }
 
 @keyframes example {
-    0%   {background-color:rgb(63, 170, 219); left:0px; top:0px;}
-    100%  {background-color:rgb(12, 83, 163); left:1000px; top:0px;}
+    0%   {background-color:rgb(63, 170, 219); left:200px; top:0px;}
+    100%  {background-color:rgb(12, 83, 163); left:800px; top:0px;}
    
 }
 
 @keyframes example2 {
-    100%   {background-color:rgb(63, 170, 219);; left:0px; top:0px;}
-    0%  {background-color:rgb(12, 83, 163); left:1000px; top:0px;}
+    100%   {background-color:rgb(63, 170, 219);; left:200px; top:0px;}
+    0%  {background-color:rgb(12, 83, 163); left:800px; top:0px;}
    
 }
 
@@ -107,6 +128,10 @@ nav img{
 
     .animation2{
         animation: none;
+    }
+
+    .mainImg{
+        display: none;
     }
 }
 
@@ -123,17 +148,18 @@ nav img{
 
 .text-box h1{
     font-size: 50px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:rgb(0, 89, 255);
+    font-weight: 200;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(255, 255, 255);
     animation-name: light;
     animation-duration: 6s ;
-    text-shadow: 2px 2px #dad9f3;
+    
 }
 @keyframes light {
     0%   {color: rgb(0, 195, 255);}
     25%  {color: rgb(0, 119, 255);}
-    50%  {color: rgb(20, 20, 88);}
-    100% {color: rgb(38, 60, 184);}
+    50%  {color: rgb(209, 209, 235);}
+    100% {color: rgb(186, 191, 219);}
   }
 .text-box p{
     margin: 10px 0 40px;
@@ -149,6 +175,7 @@ nav img{
     padding: 12px 34px;
     border:1px solid #2762e2;
     font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background: #2762e2;
     position: relative;
     cursor:pointer;
@@ -159,6 +186,7 @@ nav img{
     text-decoration: none;
     color:white;
     margin: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 12px 34px;
     border:1px solid #2762e2;
     font-size: 25px;
@@ -193,10 +221,18 @@ nav .bars{
     
 }
 
+.mainImg{
+    width:30%;
+    margin-left:60%;
+    
+}
 @media(max-width:700px){
     .text-box h1{
         font-size: 40px;
-        text-shadow:0 0 3px #318bff, 0 0 3px #318bff, 0 0 3px #318bff; ;
+        
+    }
+    .text-box{
+        left:50%;
     }
 
     .hero-btn{
@@ -264,6 +300,47 @@ nav .bars{
     
 
 }
+.firstsec{
+    height:100vh;
+    width:100%;
+    background-image:url(Artboard\ 1-100\ \(1\).jpg);
+    background-size:cover ;
+    left:30%;
+}
+
+.text{
+    padding: 40px 0;
+    height:100vh;
+}
+.text h1{
+    text-align: center;
+    color:#fff;
+    font-weight: 400;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.text p{
+    display:inline-block;
+    width:40%;
+    margin-top: 50px;
+    margin-left: 25px;
+    font-size: 30px;
+    line-height: 30px;
+    
+
+}
+
+.sec-img {
+    display: block;
+    width:40%;
+    margin-left: 70%;
+    margin-bottom: 50%;
+}
+
+.sec-img img{
+    width:40%;
+}
+
 
 /* ----nimoy service--- */
 main{
@@ -279,12 +356,14 @@ main{
 
 .service h1{
     font-size: 50px;
-    font-weight: 600px;
-    animation:type 6s infinite ;
-    overflow: hidden;
-    white-space: nowrap;
-    color: #1860e6;
-    text-shadow: 1px 1px #1863d4;
+    font-weight: lighter;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #dbdfe7;
+    
+}
+
+.service-col h3,p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 @media(max-width:700px){
@@ -293,6 +372,19 @@ main{
         font-size: 30px;
         background-color: #2196f3;
         color:#132b50;
+    }
+
+    .text h1{
+        font-size: 30px;
+        
+        
+    }
+    .text p{
+        display:inline-block;
+        font-size: 15px;
+        margin-left: 50px;
+        width:70%;
+        padding: 40px 0;
     }
 
 }
@@ -354,13 +446,14 @@ p{
    
 }
 
-main .offercon{
+section .offercon{
     width:100%;
     height: 100vh;
     background-color:#0d2344 ;
 }
 .offer{
-    width:80%;
+    width:100%;
+    height:100vh;
     background-color: #0d2344;
     text-align: center;
     margin: auto;
@@ -375,8 +468,8 @@ main .offercon{
 }
 
 .offer-col{
-    flex-basis: 40%;
-    height:200px;
+    flex-basis: 30%;
+    height:150px;
     border-radius: 14px;
     margin-bottom: 30px;
     position:relative;
@@ -387,7 +480,7 @@ main .offercon{
 }
 
 .offer-col img{
-    width:60%;
+    width:30%;
     margin-top: 30px;
     
     
@@ -428,29 +521,6 @@ main .offercon{
     opacity: 1;
 }
 
-.call{
-    height:100vh;
-    padding: 80px;
-    background-color: #132b50;
-}
-
-.cta{
-    margin:auto;
-    width:80%;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/work5.jpg );
-    background-position: center;
-    background-size: cover;
-    border-radius:10px;
-    background-color:#0d2344;
-    text-align: center;
-    padding:100px;
-}
-
-.cta h1{
-    color:#fff;
-    margin-bottom: 40px;
-    padding: 0;
-}
 
 .hero-btn3{
     display:inline-block;
@@ -473,17 +543,7 @@ main .offercon{
 
 @media(max-width:700px){
 
-    .cta{
-        margin:auto;
-        padding: 30px;
-    }
-    .cta h1{
-        font-size:24px;
-    }
-
-    .call{
-        height:50vh;
-    }
+    
 
     
     .hero-btn3{
@@ -505,7 +565,9 @@ main .offercon{
 
 .footer{
     width:100%;
+    height:100%;
     text-align: center;
+    margin-top: 80vh;
     padding: 30px 0;
     background-color:#0a172b;
 }
